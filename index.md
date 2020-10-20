@@ -12,7 +12,7 @@
 
 ***Any suggestions or thoughts, email siyi.chen_chicy@sjtu.edu.cn***
 
-***Answers are not provided for some problems, if you wan to refer to handwirren solutions, please email siyi.chen_chicy@sjtu.edu.cn***
+***Answers are not provided for some problems, if you want to refer to handwirren solutions, please email siyi.chen_chicy@sjtu.edu.cn***
 
 ------
 
@@ -110,7 +110,7 @@ Opps! I have a bottom line.
 
 Copyright@Chen Siyi
 
-Shanghai Jiaotong University
+siyi.chen_chicy@sjtu.edu.cn & siyich@umich.com
 
-University of Michgan
+Shanghai Jiaotong University & University of Michgan
 
