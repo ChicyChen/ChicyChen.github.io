@@ -6,6 +6,10 @@ You can explore one of the following:
 
 [Note1 Introduction to Probability](/VE401/1 Introduction to Probability.pdf)
 
+[Note2 Discrete Random Variables](/VE401/2 Discrete Random Variables.pdf)
+
+[Note3 Continuous Random Variables](VE401/3 Continuous Random Variables.pdf)
+
 ## Demos for VE401:
 
 
