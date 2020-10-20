@@ -2,7 +2,7 @@
 
 ### Summary
 
-![Screen Shot 2020-10-18 at 17.17.11](/Users/c/Library/Application Support/typora-user-images/Screen Shot 2020-10-18 at 17.17.11.png)
+![Screen Shot 2020-10-18 at 17.17.11](https://tva1.sinaimg.cn/large/007S8ZIlly1gjvxozndm0j30ze0u0n2m.jpg)
 
 
 
