@@ -20,7 +20,7 @@
 
 
 
-## Newst Update:
+## Newest Update:
 
 [VV286 Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)
 
