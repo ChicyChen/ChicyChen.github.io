@@ -1,4 +1,4 @@
-# Welcome to Chich!
+# Welcome to Chicy's Penguin Island!
 
 <img src="heading.jpg" alt="heading" style="zoom: 33%;" />
 
@@ -8,9 +8,11 @@
 
 ***You can explore one of the following materials...***
 
-***Main Citation from: Lecture slides of Dr. Horst Hohberger***
+***Main Citation from: Lecture slides of Dr. Horst Hohberger, and lecture slides of EECS281 in University of Michgan***
 
 ***Any suggestions or thoughts, email siyi.chen_chicy@sjtu.edu.cn***
+
+***Answers are not provided for some problems, if you wan to refer to handwirren solutions, please email siyi.chen_chicy@sjtu.edu.cn***
 
 ------
 
@@ -84,6 +86,31 @@
 
 
 
+## Notes for EECS281:
+
+[Complexity Analysis](EECS281/Complexity Analysis.md)
+
+### Sorting Algorithms
+
+- [Sorting Algorithms](EECS281/Sorting Algorithms.md)
+- [Bubble Sort](EECS281/Bubble Sort.md)
+- [Insertion Sort](EECS281/Insertion Sort.md)
+- [Selection Sort](EECS281/Selection Sort.md)
+- [Mergesort](EECS281/Mergesort.md)
+- [Quicksort](EECS281/Quicksort.md)
+- [Heap and Heapsort](EECS281/Heap and Heapsort.md)
+
+
+
+
+
 ------
 
 Opps! I have a bottom line.
+
+Copyright@Chen Siyi
+
+Shanghai Jiaotong University
+
+University of Michgan
+
