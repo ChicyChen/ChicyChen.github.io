@@ -18,6 +18,18 @@
 
 
 
+
+
+## Newst Update:
+
+[VV286 Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)
+
+[EECS281 Mergesort](EECS281/Mergesort.md)
+
+
+
+
+
 ## Notes for VE401:
 
 [Note1 Introduction to Probability](VE401/1 Introduction to Probability.pdf)
@@ -96,9 +108,9 @@
 - [Bubble Sort](EECS281/Bubble Sort.md)
 - [Insertion Sort](EECS281/Insertion Sort.md)
 - [Selection Sort](EECS281/Selection Sort.md)
-- [Mergesort](EECS281/Mergesort.md)
-- [Quicksort](EECS281/Quicksort.md)
 - [Heap and Heapsort](EECS281/Heap and Heapsort.md)
+- [Quicksort](EECS281/Quicksort.md)
+- [Mergesort](EECS281/Mergesort.md)
 
 
 
