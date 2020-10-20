@@ -1,0 +1,657 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27685,        649]
+NotebookOptionsPosition[     26079,        614]
+NotebookOutlinePosition[     26417,        629]
+CellTagsIndexPosition[     26374,        626]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Hypothesis Testing", "Title",
+ FontColor->RGBColor[0.7656366826886397, 0., 0.01731898985275044]]], "Text",
+ CellChangeTimes->{{3.802519485657496*^9, 3.802519503972686*^9}, {
+  3.802519548001794*^9, 3.802519552606963*^9}},
+ TextAlignment->Center,ExpressionUUID->"ccd71ea7-70cc-4783-bbd1-e377de586b89"],
+
+Cell[TextData[Cell[BoxData[Cell[TextData[StyleBox["P-value", "Subtitle",
+  FontColor->RGBColor[0.7656366826886397, 0., 0.01731898985275044]]], "Text",
+  CellChangeTimes->{{3.801302134457045*^9, 3.801302139017795*^9}, {
+   3.801302801656352*^9, 3.8013028203556767`*^9}},ExpressionUUID->
+  "ee824e1e-17a3-4735-b8fd-5c631e417f0b"]], "Text",
+ CellChangeTimes->{{3.801365152034984*^9, 3.801365220405984*^9}, 
+   3.801365290856298*^9, {3.801368611814934*^9, 
+   3.8013686798592863`*^9}},ExpressionUUID->"5a6838a1-93ba-4278-b65c-\
+adc6ede9dc87"]], "Text",
+ CellChangeTimes->{{3.802519559080433*^9, 
+  3.802519599830388*^9}},ExpressionUUID->"1756e967-af6e-43c2-ae47-\
+4931f34b5791"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"IntegralPlot", "[", 
+    RowBox[{
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{"5", ",", " ", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1000", "/", 
+           RowBox[{"(", 
+            RowBox[{"12", "n"}], ")"}]}], "]"}]}], "]"}], ",", "x"}], "]"}], 
+     ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "m"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "2"}], "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<\!\(\*OverscriptBox[\(X\), \(_\)]\)\>\"", ",", 
+        "\"\<f\!\(\*OverscriptBox[\(X\), \(_\)]\)\>\""}], "}"}]}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", 
+      "\"\<P-value of One-tailed Z-test for different n\>\""}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "\"\<sample size\>\""}], "}"}], ",", " ", 
+     "1", ",", "2000", ",", "1", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "0", ",", "\"\<mean of the data\>\""}], "}"}], ",", 
+     "0", ",", "10", ",", "0.01"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8024967053432493`*^9, 3.802496712815238*^9}, {
+  3.8024967518600607`*^9, 3.80249676729066*^9}, {3.8024968039198713`*^9, 
+  3.802496851402454*^9}, {3.802496882379027*^9, 3.802496914860467*^9}, {
+  3.802496949355908*^9, 3.802497039483539*^9}, {3.80249706991411*^9, 
+  3.802497106974762*^9}, {3.8024976447849293`*^9, 3.802497645611876*^9}, {
+  3.8025175659787283`*^9, 3.80251756768948*^9}, {3.8025176509116898`*^9, 
+  3.802517654900322*^9}, {3.8025177009294453`*^9, 3.802517745641814*^9}, {
+  3.802517786672604*^9, 3.802517835626862*^9}, {3.802518706424285*^9, 
+  3.802518741350543*^9}, {3.802518804234331*^9, 3.802518909488678*^9}, {
+  3.8025199099121723`*^9, 3.80252001072156*^9}, {3.802520052569442*^9, 
+  3.802520129390541*^9}},
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"1964a405-3c91-4809-819c-9ccad39ff55b"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 4.46, $CellContext`n$$ = 398, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "sample size"}, 1, 2000, 1}, {{
+       Hold[$CellContext`m$$], 0, "mean of the data"}, 0, 10, 0.01}}, 
+    Typeset`size$$ = {360., {126., 131.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$1172187$$ = 0, $CellContext`m$1172188$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 0, $CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$1172187$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$1172188$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`IntegralPlot[
+        PDF[
+         NormalDistribution[5, 
+          Sqrt[1000/(12 $CellContext`n$$)]], $CellContext`x], {$CellContext`x,
+          0, 10}, {0, $CellContext`m$$}, PlotRange -> {0, 2}, 
+        AxesLabel -> {
+         "\!\(\*OverscriptBox[\(X\), \(_\)]\)", 
+          "f\!\(\*OverscriptBox[\(X\), \(_\)]\)"}, PlotLabel -> 
+        "P-value of One-tailed Z-test for different n"], 
+      "Specifications" :> {{{$CellContext`n$$, 1, "sample size"}, 1, 2000, 1, 
+         Appearance -> "Labeled"}, {{$CellContext`m$$, 0, "mean of the data"},
+          0, 10, 0.01}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {185., 191.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.802496716623516*^9, 3.8024967735945587`*^9, {3.802496806050088*^9, 
+   3.8024968535564127`*^9}, 3.8024969019694023`*^9, {3.802496956324483*^9, 
+   3.802497043581973*^9}, {3.8024970755971537`*^9, 3.802497108886342*^9}, {
+   3.802497638953271*^9, 3.802497651781371*^9}, 3.802517394399925*^9, 
+   3.802517570688716*^9, 3.802517657233787*^9, {3.802517732889223*^9, 
+   3.802517747470345*^9}, {3.8025177887604437`*^9, 3.8025178375852213`*^9}, {
+   3.802518726669322*^9, 3.8025187439918947`*^9}, {3.802518888055777*^9, 
+   3.802518911519227*^9}, 3.802520143363841*^9},
+ CellLabel->
+  "Out[136]=",ExpressionUUID->"72a1e19a-c3a9-4979-b155-96a6041b2225"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Integral2Plot", "[", 
+     RowBox[{
+      RowBox[{"PDF", "[", 
+       RowBox[{
+        RowBox[{"NormalDistribution", "[", 
+         RowBox[{"5", ",", " ", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{"1000", "/", 
+            RowBox[{"(", 
+             RowBox[{"12", "n"}], ")"}]}], "]"}]}], "]"}], ",", "x"}], "]"}], 
+      ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"Min", "[", 
+         RowBox[{"m", ",", 
+          RowBox[{"10", "-", "m"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Max", "[", 
+         RowBox[{"m", ",", 
+          RowBox[{"10", "-", "m"}]}], "]"}], ",", "10"}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "2"}], "}"}]}], ",", 
+      RowBox[{"AxesLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<\!\(\*OverscriptBox[\(X\), \(_\)]\)\>\"", ",", 
+         "\"\<f\!\(\*OverscriptBox[\(X\), \(_\)]\)\>\""}], "}"}]}], ",", " ", 
+      
+      RowBox[{
+      "PlotLabel", "\[Rule]", 
+       "\"\<P-value of Two-tailed Z-test for different n\>\""}]}], "]"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "\"\<sample size\>\""}], "}"}], ",", " ", 
+      "1", ",", "2000", ",", "1", ",", " ", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"m", ",", "1", ",", "\"\<mean of the data\>\""}], "}"}], ",", 
+      "0", ",", "10", ",", "0.01"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.802519003745532*^9, 3.802519120488319*^9}, {
+  3.8025191960698767`*^9, 3.802519233613407*^9}, {3.8025201736872873`*^9, 
+  3.80252018018023*^9}},
+ CellLabel->
+  "In[137]:=",ExpressionUUID->"d2c26372-4ad9-4042-9d63-f2d7aa5d7256"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 5.37, $CellContext`n$$ = 416, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "sample size"}, 1, 2000, 1}, {{
+       Hold[$CellContext`m$$], 1, "mean of the data"}, 0, 10, 0.01}}, 
+    Typeset`size$$ = {360., {126., 131.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$1175355$$ = 0, $CellContext`m$1175356$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 1, $CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$1175355$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$1175356$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`Integral2Plot[
+        PDF[
+         NormalDistribution[5, 
+          Sqrt[1000/(12 $CellContext`n$$)]], $CellContext`x], {$CellContext`x,
+          0, 10}, {0, 
+         Min[$CellContext`m$$, 10 - $CellContext`m$$]}, {
+         Max[$CellContext`m$$, 10 - $CellContext`m$$], 10}, 
+        PlotRange -> {0, 2}, 
+        AxesLabel -> {
+         "\!\(\*OverscriptBox[\(X\), \(_\)]\)", 
+          "f\!\(\*OverscriptBox[\(X\), \(_\)]\)"}, PlotLabel -> 
+        "P-value of Two-tailed Z-test for different n"], 
+      "Specifications" :> {{{$CellContext`n$$, 1, "sample size"}, 1, 2000, 1, 
+         Appearance -> "Labeled"}, {{$CellContext`m$$, 1, "mean of the data"},
+          0, 10, 0.01}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {185., 191.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.802519029551152*^9, 3.8025191225664873`*^9, {3.802519228356443*^9, 
+   3.802519235444475*^9}, 3.802519364388813*^9, 3.802519405617196*^9, 
+   3.802520182101324*^9},
+ CellLabel->
+  "Out[137]=",ExpressionUUID->"cf733fc4-299b-43c9-873f-961e73300a46"]
+}, Open  ]],
+
+Cell[TextData[Cell[BoxData[Cell[TextData[StyleBox["Draw OC Curves", "Subtitle",
+  FontColor->RGBColor[0.7656366826886397, 0., 0.01731898985275044]]], "Text",
+  CellChangeTimes->{{3.801302134457045*^9, 3.801302139017795*^9}, {
+   3.801302801656352*^9, 3.8013028203556767`*^9}},ExpressionUUID->
+  "a5ab9798-c689-47bc-a42e-34788a9fa568"]], "Text",
+ CellChangeTimes->{{3.801365152034984*^9, 3.801365220405984*^9}, 
+   3.801365290856298*^9, {3.801368611814934*^9, 
+   3.8013686798592863`*^9}},ExpressionUUID->"ec4982b1-8c80-46e7-868a-\
+234ab3910d51"]], "Text",
+ CellChangeTimes->{{3.802519626349956*^9, 3.8025196712562103`*^9}, {
+  3.80251976240338*^9, 
+  3.802519763066392*^9}},ExpressionUUID->"a54bec57-e960-4070-b7d7-\
+00f7d63e96b5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"CDF", "[", 
+        RowBox[{
+         RowBox[{"NormalDistribution", "[", 
+          RowBox[{"0", ",", "1"}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"InverseCDF", "[", 
+           RowBox[{
+            RowBox[{"NormalDistribution", "[", 
+             RowBox[{"0", ",", "1"}], "]"}], ",", 
+            RowBox[{"1", "-", 
+             RowBox[{"\[Alpha]", "/", "2"}]}]}], "]"}], "-", 
+          RowBox[{
+           RowBox[{"Abs", "[", "d", "]"}], "*", 
+           RowBox[{"\[Sqrt]", "n"}]}]}]}], "]"}], "-", 
+       RowBox[{"CDF", "[", 
+        RowBox[{
+         RowBox[{"NormalDistribution", "[", 
+          RowBox[{"0", ",", "1"}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"InverseCDF", "[", 
+           RowBox[{
+            RowBox[{"NormalDistribution", "[", 
+             RowBox[{"0", ",", "1"}], "]"}], ",", 
+            RowBox[{"\[Alpha]", "/", "2"}]}], "]"}], "-", 
+          RowBox[{
+           RowBox[{"Abs", "[", "d", "]"}], "*", 
+           RowBox[{"\[Sqrt]", "n"}]}]}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"d", ",", 
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+      RowBox[{"AxesLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<d\>\"", ",", 
+         "\"\<P[fail to reject \!\(\*SubscriptBox[\(H\), \(0\)]\)]\>\""}], 
+        "}"}]}], ",", " ", 
+      RowBox[{
+      "PlotLabel", "\[Rule]", 
+       "\"\<OC Curve of Two-tailed Z-test for different n\>\""}]}], "]"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "\"\<sample size\>\""}], "}"}], ",", " ", 
+      "1", ",", "250", ",", "1", ",", " ", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\[Alpha]", ",", "0.05", ",", "\"\<\[Alpha]\>\""}], "}"}], ",",
+       "0.001", ",", "0.5", ",", "0.001"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQbdbIfnRHyBvHE/bix0H0XvMLP0F0iMLqfyBa72GY
+8E4g7eOyWRREr3qkKwuihd1uGoDouyr7TUD0oUMzTUH0j0AHKxBtcH2VNYh2
+C3J0ANFrLnI7gugO8xZ3EC1zINMbLC9aEAeiJUyEs0G04nrVYhBtUa0Dpo1r
+ROpBdGeeXQNYv9ziFhD9TXoTmDZbXd8FohUO3gPTTqzb54LoV+UHwfT5W4nL
+QPTyDZtWg+gwFpPtIFpK6PlusD1iqw6D6K1vvc+AaC6vI4/B/kx4/AJsz9Sj
+b0C0zvqmdyBayzRVbjeQfvScRR5EG2gnm18Cmf/yugWIBgAgAK2d
+  "],
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"0aedc58e-aaff-4bc3-ba10-e653fd02f142"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, $CellContext`\[Alpha]$$ = 0.029, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "sample size"}, 1, 250, 1}, {{
+       Hold[$CellContext`\[Alpha]$$], 0.05, "\[Alpha]"}, 0.001, 0.5, 0.001}}, 
+    Typeset`size$$ = {360., {130., 134.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$1247251$$ = 0, $CellContext`\[Alpha]$1247252$$ = 0}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n$$ = 1, $CellContext`\[Alpha]$$ = 0.05}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$1247251$$, 0], 
+        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$1247252$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[CDF[
+          NormalDistribution[0, 1], InverseCDF[
+            NormalDistribution[0, 1], 1 - $CellContext`\[Alpha]$$/2] - 
+          Abs[$CellContext`d] Sqrt[$CellContext`n$$]] - CDF[
+         NormalDistribution[0, 1], InverseCDF[
+           NormalDistribution[0, 1], $CellContext`\[Alpha]$$/2] - 
+         Abs[$CellContext`d] Sqrt[$CellContext`n$$]], {$CellContext`d, -5, 5},
+         PlotRange -> {0, 1}, 
+        AxesLabel -> {
+         "d", "P[fail to reject \!\(\*SubscriptBox[\(H\), \(0\)]\)]"}, 
+        PlotLabel -> "OC Curve of Two-tailed Z-test for different n"], 
+      "Specifications" :> {{{$CellContext`n$$, 1, "sample size"}, 1, 250, 1, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`\[Alpha]$$, 0.05, "\[Alpha]"}, 0.001, 0.5,
+          0.001}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {189., 195.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.802514971622764*^9, 3.802516011736827*^9, 3.8025160690966063`*^9, {
+   3.802516274009636*^9, 3.802516314711006*^9}, 3.8025163795363073`*^9, 
+   3.8025165060607243`*^9, 3.802516720978681*^9, {3.8025167902898197`*^9, 
+   3.8025168123580303`*^9}, {3.802516944873105*^9, 3.802516961670348*^9}, {
+   3.802517027576211*^9, 3.80251711144622*^9}, {3.802517287672649*^9, 
+   3.8025173210298986`*^9}, 3.802517395331023*^9, 3.8025197027366953`*^9, 
+   3.802519835623505*^9, 3.8025671180170937`*^9},
+ CellLabel->
+  "Out[138]=",ExpressionUUID->"bd9a6b78-dcfb-428b-a125-1f6de91b9129"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"CDF", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{"0", ",", "1"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"InverseCDF", "[", 
+         RowBox[{
+          RowBox[{"NormalDistribution", "[", 
+           RowBox[{"0", ",", "1"}], "]"}], ",", 
+          RowBox[{"1", "-", "\[Alpha]"}]}], "]"}], "-", 
+        RowBox[{"d", "*", 
+         RowBox[{"\[Sqrt]", "n"}]}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"d", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<d\>\"", ",", 
+        "\"\<P[fail to reject \!\(\*SubscriptBox[\(H\), \(0\)]\)]\>\""}], 
+       "}"}]}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", 
+      "\"\<OC Curve of One-tailed Z-test for different n\>\""}]}], "]"}], ",",
+    "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "\"\<sample size\>\""}], "}"}], ",", " ", 
+     "1", ",", "250", ",", "1", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]", ",", "0.05", ",", "\"\<\[Alpha]\>\""}], "}"}], ",", 
+     "0.001", ",", "0.5", ",", "0.001"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.802517371419641*^9, 3.802517378731287*^9}, {
+   3.802517445793207*^9, 3.802517447890016*^9}, 3.8025197763419*^9, 
+   3.802519807876491*^9},
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"39add9ae-3039-4d93-95ee-3d69b7d40b28"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, $CellContext`\[Alpha]$$ = 0.05, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "sample size"}, 1, 250, 1}, {{
+       Hold[$CellContext`\[Alpha]$$], 0.05, "\[Alpha]"}, 0.001, 0.5, 0.001}}, 
+    Typeset`size$$ = {360., {130., 134.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$1119386$$ = 0, $CellContext`\[Alpha]$1119387$$ = 0}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n$$ = 1, $CellContext`\[Alpha]$$ = 0.05}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$1119386$$, 0], 
+        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$1119387$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        CDF[
+         NormalDistribution[0, 1], InverseCDF[
+           NormalDistribution[0, 1], 
+           1 - $CellContext`\[Alpha]$$] - $CellContext`d 
+         Sqrt[$CellContext`n$$]], {$CellContext`d, -5, 5}, 
+        PlotRange -> {0, 1}, 
+        AxesLabel -> {
+         "d", "P[fail to reject \!\(\*SubscriptBox[\(H\), \(0\)]\)]"}, 
+        PlotLabel -> "OC Curve of One-tailed Z-test for different n"], 
+      "Specifications" :> {{{$CellContext`n$$, 1, "sample size"}, 1, 250, 1, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`\[Alpha]$$, 0.05, "\[Alpha]"}, 0.001, 0.5,
+          0.001}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {189., 195.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.802517381044187*^9, 3.802517395469411*^9}, 
+   3.8025198113402853`*^9},
+ CellLabel->
+  "Out[134]=",ExpressionUUID->"7237a0ca-6b2a-4e1c-a26e-94fcb468e824"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{"CDF", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{"0", ",", "1"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"InverseCDF", "[", 
+         RowBox[{
+          RowBox[{"NormalDistribution", "[", 
+           RowBox[{"0", ",", "1"}], "]"}], ",", 
+          RowBox[{"1", "-", "\[Alpha]"}]}], "]"}], "-", 
+        RowBox[{"d", "*", 
+         RowBox[{"\[Sqrt]", "n"}]}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "100"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]", ",", " ", "0.001", ",", " ", "0.05"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}], ",", " ", 
+     RowBox[{"PlotLabel", "\[Rule]", "\"\<Power of One-tailed Z-test\>\""}]}],
+     "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d", ",", "0.5", ",", "\"\<d\>\""}], "}"}], ",", "0", ",", "5", 
+     ",", "0.001"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.8025679802378817`*^9, {3.8025680866148977`*^9, 3.802568236752941*^9}, {
+   3.802569042816868*^9, 3.802569051191659*^9}},
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"98a22ed4-e48f-416e-8b60-d373dae00c56"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`d$$], 0.5, "d"}, 0, 5, 0.001}}, Typeset`size$$ = {
+    346., {106., 111.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`d$1536256$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`d$$ = 0.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`d$$, $CellContext`d$1536256$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot3D[
+        CDF[
+         NormalDistribution[0, 1], InverseCDF[
+           NormalDistribution[0, 1], 
+           1 - $CellContext`\[Alpha]] - $CellContext`d$$ 
+         Sqrt[$CellContext`n]], {$CellContext`n, 1, 
+         100}, {$CellContext`\[Alpha], 0.001, 0.05}, PlotRange -> {0, 1}, 
+        PlotLabel -> "Power of One-tailed Z-test"], 
+      "Specifications" :> {{{$CellContext`d$$, 0.5, "d"}, 0, 5, 0.001}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{391., {151., 157.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.802567984013331*^9, {3.802568201370338*^9, 3.802568238686035*^9}, 
+   3.802569069143511*^9},
+ CellLabel->
+  "Out[145]=",ExpressionUUID->"45f32db6-6795-47bc-ba81-60626bb280de"]
+}, Open  ]]
+},
+WindowSize->{808, 685},
+WindowMargins->{{Automatic, 279}, {Automatic, 26}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 324, 4, 73, "Text",ExpressionUUID->"ccd71ea7-70cc-4783-bbd1-e377de586b89"],
+Cell[885, 26, 674, 11, 48, "Text",ExpressionUUID->"1756e967-af6e-43c2-ae47-4931f34b5791"],
+Cell[CellGroupData[{
+Cell[1584, 41, 2318, 54, 146, "Input",ExpressionUUID->"1964a405-3c91-4809-819c-9ccad39ff55b"],
+Cell[3905, 97, 2939, 55, 395, "Output",ExpressionUUID->"72a1e19a-c3a9-4979-b155-96a6041b2225"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6881, 157, 2079, 56, 167, "Input",ExpressionUUID->"d2c26372-4ad9-4042-9d63-f2d7aa5d7256"],
+Cell[8963, 215, 2651, 53, 395, "Output",ExpressionUUID->"cf733fc4-299b-43c9-873f-961e73300a46"]
+}, Open  ]],
+Cell[11629, 271, 731, 12, 48, "Text",ExpressionUUID->"a54bec57-e960-4070-b7d7-00f7d63e96b5"],
+Cell[CellGroupData[{
+Cell[12385, 287, 2731, 72, 234, "Input",ExpressionUUID->"0aedc58e-aaff-4bc3-ba10-e653fd02f142"],
+Cell[15119, 361, 3103, 58, 403, "Output",ExpressionUUID->"bd9a6b78-dcfb-428b-a125-1f6de91b9129"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18259, 424, 1812, 49, 144, "Input",ExpressionUUID->"39add9ae-3039-4d93-95ee-3d69b7d40b28"],
+Cell[20074, 475, 2521, 51, 403, "Output",ExpressionUUID->"7237a0ca-6b2a-4e1c-a26e-94fcb468e824"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22632, 531, 1354, 35, 123, "Input",ExpressionUUID->"98a22ed4-e48f-416e-8b60-d373dae00c56"],
+Cell[23989, 568, 2074, 43, 362, "Output",ExpressionUUID->"45f32db6-6795-47bc-ba81-60626bb280de"]
+}, Open  ]]
+}
+]
+*)
+
