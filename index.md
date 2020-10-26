@@ -22,6 +22,8 @@
 
 ## Newest Update:
 
+[VV286 Note5 Complex Analysis II](VV286/Note4 Complex Analysis.md)
+
 [VV286 Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)
 
 [EECS281 Mergesort](EECS281/Mergesort.md)
@@ -95,6 +97,8 @@
 [Note of Midterm1 Part1](VV286/Mid1Part1.pdf)
 
 [Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)
+
+[Note5 Complex Analysis II](VV286/Note4 Complex Analysis.md)
 
 
 
