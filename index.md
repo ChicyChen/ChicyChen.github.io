@@ -22,6 +22,8 @@
 
 ## Newest Update:
 
+[VV286 Note6 Laplace Transform](VV286/Note6 Laplace Transform.html)  [(Download pdf)](/VV286/Note6 Note5 Laplace Transform.pdf)
+
 [VV286 Note5 Complex Analysis II](VV286/Note5 Complex Analysis II.html)  [(Download pdf)](/VV286/Note5 Complex Analysis II.pdf)
 
 [VV286 Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)
