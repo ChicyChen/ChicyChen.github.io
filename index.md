@@ -22,11 +22,11 @@
 
 ## Newest Update:
 
-[VV286 Note6 Laplace Transform](VV286/Note6 Laplace Transform.html)  [(Download pdf)](/VV286/Note6 Note5 Laplace Transform.pdf)
+[VV286 Note6 Laplace Transform](VV286/Note6 Laplace Transform.html)  [(Download pdf)](/VV286/Note6 Note5 Laplace Transform.pdf)  [(Informal Solutions)](/VV286/Note6 Sol.pdf)
 
-[VV286 Note5 Complex Analysis II](VV286/Note5 Complex Analysis II.html)  [(Download pdf)](/VV286/Note5 Complex Analysis II.pdf)
+[VV286 Note5 Complex Analysis II](VV286/Note5 Complex Analysis II.html)  [(Download pdf)](/VV286/Note5 Complex Analysis II.pdf)  [(Informal Solutions)](/VV286/Note5 Sol.pdf)
 
-[VV286 Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)
+[VV286 Note4 Complex Analysis](VV286/Note4 Complex Analysis.html)  [(Download pdf)](/VV286/Note4 Complex Analysis.pdf)  [(Informal Solutions)](/VV286/Note4 Sol.pdf)
 
 [EECS281 Mergesort](EECS281/Mergesort.md)
 
