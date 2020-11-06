@@ -22,7 +22,9 @@
 
 ## Newest Update:
 
-[VV286 Note6 Laplace Transform](VV286/Note6 Laplace Transform.html)  [(Download pdf)](/VV286/Note6 Note5 Laplace Transform.pdf)  [(Informal Solutions)](/VV286/Note6 Sol.pdf)
+[VV286 Midterm2 Part1](VV286/Midterm2 Part1.html)  [(Download pdf)](/VV286/Midterm2 Part1.pdf) 
+
+[VV286 Note6 Laplace Transform](VV286/Note6 Laplace Transform.html)  [(Download pdf)](/VV286/Note6 Laplace Transform.pdf)  [(Informal Solutions)](/VV286/Note6 Sol.pdf)
 
 [VV286 Note5 Complex Analysis II](VV286/Note5 Complex Analysis II.html)  [(Download pdf)](/VV286/Note5 Complex Analysis II.pdf)  [(Informal Solutions)](/VV286/Note5 Sol.pdf)
 
