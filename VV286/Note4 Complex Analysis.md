@@ -71,15 +71,15 @@ October 19, 2020
   \operatorname{diam}(\Omega):=\sup _{z, w \in \Omega}|z-w|
   $$
 
-> ###### Question2
+> **Question2**
 >
-> ###### Give a set which is open and closed.
+> Give a set which is open and closed.
 >
-> ###### Give a set which is closed and unbounded. 
+> Give a set which is closed and unbounded. 
 
 ------
 
-> ###### Answer2
+> **Answer2**
 
 
 
@@ -87,13 +87,13 @@ October 19, 2020
 
 
 
-> ###### Question3
+> **Question3**
 >
-> ###### Is the set  $U = \{ Z\in \mathbb{C}:2<|z|\leq 3\}$ open or closed?
+> Is the set  $U = \{ Z\in \mathbb{C}:2<|z|\leq 3\}$ open or closed?
 
 ------
 
-> ###### Answer3
+> **Answer3**
 
 
 
@@ -261,9 +261,9 @@ $$
 
 
 
-> ###### Question5
+> **Question5**
 >
-> ###### Evaluate the integral, where $C$ the line segment with initial point −1 and final point i; or the arc of the unit circle $Im z ≥ 0$ with initial point −1 and final point i. 
+> Evaluate the integral, where $C$ the line segment with initial point −1 and final point i; or the arc of the unit circle $Im z ≥ 0$ with initial point −1 and final point i. 
 
 $$
 \int_{C} |z|^2 d z
@@ -271,7 +271,7 @@ $$
 
 ------
 
-> ###### Answer5
+> **Answer5**
 
 
 

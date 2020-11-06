@@ -4,7 +4,7 @@ typora-copy-images-to: upload
 
 @Chen Siyi
 
-October 26, 2020
+November 2, 2020
 
 # Note6 Laplace Transform
 
