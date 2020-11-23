@@ -22,6 +22,8 @@
 
 ## Newest Update:
 
+[VV286 Note8 Bessel Equations](VV286/Note8 Bessel Equations.html)  [(Download pdf)](/VV286/Note8 Bessel Equations.pdf) 
+
 [VV286 Note7 Power Series Solutions](VV286/Note7 Power Series Solutions.html)  [(Download pdf)](/VV286/Note7 Power Series Solutions.pdf) 
 
 [VV286 Midterm2 Part1](VV286/Midterm2 Part1.html)  [(Download pdf)](/VV286/Midterm2 Part1.pdf) 
