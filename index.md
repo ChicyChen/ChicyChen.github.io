@@ -1,9 +1,5 @@
 # Welcome to Chicy's Penguin Island!
 
-<img src="heading.jpg" alt="heading" style="zoom: 33%;" />
-
-
-
 ****
 
 ***You can explore one of the following materials...***
@@ -21,6 +17,8 @@
 
 
 ## Newest Update:
+
+[VV286 Note9 Fourier Series](VV286/Note9 Fourier Series.html)  [(Download pdf)](/VV286/Note9 Fourier Series.pdf) 
 
 [VV286 Note8 Bessel Equations](VV286/Note8 Bessel Equations.html)  [(Download pdf)](/VV286/Note8 Bessel Equations.pdf) 
 
