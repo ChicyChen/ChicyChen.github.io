@@ -18,7 +18,7 @@
 
 ## Newest Update:
 
-[VV286 Final Part1](VV286/Final Part1s.html)  [(Download pdf)](/VV286/Final Part1.pdf) 
+[VV286 Final Part1](VV286/Final Part1s.html)  [(Download pdf)](/VV286/Final Part1.pdf)  [(More About Bessel Function)](/VV286/Basics of Bessel Functions.pdf)
 
 [VV286 Note9 Fourier Series](VV286/Note9 Fourier Series.html)  [(Download pdf)](/VV286/Note9 Fourier Series.pdf) [(Informal Solutions)](/VV286/Note9 Solutions.pdf)
 
