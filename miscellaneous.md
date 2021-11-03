@@ -2,6 +2,6 @@
 
 ****
 
-***The real thing I love forever is life itself.***
+***The real thing I love forever, is life itself.***
 
 ------

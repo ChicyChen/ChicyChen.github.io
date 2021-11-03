@@ -2,24 +2,10 @@
 
 ****
 
-***Main Citation from: Lecture slides of Dr. Horst Hohberger, and lecture slides of EECS281 in University of Michgan***
+***Teaching gives me real happiness.***
 
-***Any suggestions or thoughts, email siyich@umich.edu***
-
-***Answers are not provided for some problems, if you want to refer to handwirren solutions, please email siyich@umich.edu***
 
 ------
-
-
-
-
-
-## Newest Update:
-
-
-[EECS281 Mergesort](EECS281/Mergesort.md)
-
-
 
 
 
@@ -134,4 +120,10 @@ siyich@umich.edu
 University of Michgan-Ann Arbor
 
 Shanghai Jiaotong University
+
+------
+
+*Main Citation from: Lecture slides of Dr. Horst Hohberger, and lecture slides of EECS281 in University of Michgan*
+
+*Any suggestions or thoughts are welcomed through emails!*
 
