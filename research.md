@@ -1,8 +1,40 @@
-# Welcome to Chicy's Penguin Island!
+[Home](index.md)
+
+# Research
 
 ****
 
 ***Seeing how new knowledge comes out is a magical journey.***
+
+------
+
+## Generate 3D Indoor Synthetic Dataset
+
+*Advisor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+
+*Mentor: [Shengyi Qian](https://jasonqsy.github.io/)*
+
+In progress
+
+------
+
+## Combined Understanding of 3D Plane Articulation and Partial Human Pose Estimation
+
+*Advisor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+
+*Mentor: [Shengyi Qian](https://jasonqsy.github.io/)*
+
+<img src="SURE/model.png" alt="sure" width="800"/> 
+
+1. Independently predict 3D partial human poses as SMPL meshes  in pytorch3d following Rockwell’s methods. And use PointRend to obtain 2D human masks.
+
+2. Independently predict  2D plane masks as well as 3D articulation information. 
+
+3. Use a differential render in pytorch3d similar to the NMR in PHOSA for back-propagation,  to build a similar system optimizing the position and size of the person considering 3d space relationship and interaction for each single image. 
+
+
+[github](https://github.com/ChicyChen/articulation3d/tree/main/combined)(available soon)
+[poster](SURE/poster.pdf)
 
 ------
 
@@ -20,3 +52,4 @@
 [abstract](Origami/intro.pdf) 
 [gitlab](https://gitlab.eecs.umich.edu/logm/wi21/convex-presentations-of-translation-surfaces)  [report](Origami/report.pdf) 
 [poster](Origami/poster.pdf)
+

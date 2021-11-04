@@ -1,15 +1,19 @@
-# Welcome to Chicy's Penguin Island!
+[Home](index.md)
+
+# Teaching
 
 ****
 
-***Teaching gives me real happiness.***
+***Teaching gives me happiness.***
 
 
 ------
 
+## VE401-Probability Statistics Methods
 
+*Instructor: [Horst Hohberger](https://umji.sjtu.edu.cn/~horst/)*
 
-## Notes for VE401:
+### Notes:
 
 [Note1 Introduction to Probability](VE401/1 Introduction to Probability.pdf)
 
@@ -45,7 +49,7 @@
 
 
 
-## Demos for VE401:
+### Demos:
 
 [Demo1 Visualization](VE401/Demo1_Visualization.nb)
 
@@ -63,7 +67,12 @@
 
 
 
-## Notes for VV286:
+## VV286-Honorable Mathematics III:
+
+
+*Instructor: [Horst Hohberger](https://umji.sjtu.edu.cn/~horst/)*
+
+### Notes:
 
 [Note1 First Order Differantial Equations](VV286/Note1 First Order Differantial Equations.pdf)
 
@@ -91,39 +100,14 @@
 
 
 
-## Notes for EECS281:
-
-[Complexity Analysis](EECS281/Complexity Analysis.md)
-
-### Sorting Algorithms
-
-- [Sorting Algorithms](EECS281/Sorting Algorithms.md)
-- [Bubble Sort](EECS281/Bubble Sort.md)
-- [Insertion Sort](EECS281/Insertion Sort.md)
-- [Selection Sort](EECS281/Selection Sort.md)
-- [Heap and Heapsort](EECS281/Heap and Heapsort.md)
-- [Quicksort](EECS281/Quicksort.md)
-- [Mergesort](EECS281/Mergesort.md)
-
-
-
-
 
 ------
 
 Opps! I have a bottom line.
 
-Copyright@Siyi Chen
-
-siyich@umich.edu
-
-University of Michgan-Ann Arbor
-
-Shanghai Jiaotong University
-
 ------
 
-*Main Citation from: Lecture slides of Dr. Horst Hohberger, and lecture slides of EECS281 in University of Michgan*
+*Main Citation from: Lecture slides of Dr. Horst Hohberger*
 
 *Any suggestions or thoughts are welcomed through emails!*
 
