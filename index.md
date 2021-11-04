@@ -1,5 +1,3 @@
-@Siyi Chen
-
 # Welcome to Chicy's Penguin Island!
 
 ![](heading.jpg)
