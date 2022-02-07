@@ -14,7 +14,7 @@
 
 Game Design Project 1
 
-[play online](Others/190B.pdf)
+[play online](Others/Web_Zelda)
 <!-- [MacOS download](Others/Web_Zelda)
-[Windows download](Others/190B.pdf) -->
+[Windows download](Others/Web_Zelda) -->
 

@@ -44,7 +44,9 @@ In progress
 
 *Advisors: [Chaya Norton](https://lsa.umich.edu/math/people/postdoc-faculty/nchaya.html), [Paul Apisa](http://www-personal.umich.edu/~apisa/)*
 
-*Graduate Student Mentors: Christopher Zhang, Sayantan Khan*
+*Mentors: Christopher Zhang, Sayantan Khan*
+
+<img src="Origami/surface.png" alt="origami" width="500"/> 
 
 1. We (a group of students really green to topology) have designed and implemented beta versions of enumerating origamis in H(2).
 2. We have utilized SageMath to implement the convexity test presented in [this paper](https://arxiv.org/abs/1306.3606) by Lelievre and Weiss.
