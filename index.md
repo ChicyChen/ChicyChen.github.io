@@ -23,6 +23,8 @@ I am a senior student in [University of Michigan-Ann Arbor](https://cse.engin.um
 
 3. [Project](project.md)
 
-4. [Teaching](teaching.md)
+4. [Game](game.md)
 
-5. [Miscellaneous](miscellaneous.md)
+5. [Teaching](teaching.md)
+
+6. [Miscellaneous](miscellaneous.md)
