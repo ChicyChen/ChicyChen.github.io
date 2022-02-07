@@ -14,7 +14,7 @@
 
 Game Design Project 1
 
-[play online](Others/Web_Zelda)
+[play online](http://www-personal.umich.edu/~siyich/Web_Zelda/)
 <!-- [MacOS download](Others/Web_Zelda)
 [Windows download](Others/Web_Zelda) -->
 
