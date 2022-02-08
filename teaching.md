@@ -6,6 +6,12 @@
 
 ***Teaching gives me happiness.***
 
+------
+
+## EECS442-Computer Vision
+
+*Instructor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+*[Course Website](https://web.eecs.umich.edu/~fouhey/teaching/EECS442_W22/)*
 
 ------
 
