@@ -12,9 +12,17 @@
 
 *Student Group: Siyi Chen, Yigao Fang*
 
-Game Design Project 1
+EECS 494 Game Design Project 1
 
 [play online](http://www-personal.umich.edu/~siyich/Web_Zelda/)
-<!-- [MacOS download](Others/Web_Zelda)
-[Windows download](Others/Web_Zelda) -->
+
+
+## Save My Love
+
+*Student Group: Siyi Chen*
+
+EECS 494 Game Design Project 2
+
+[play online](http://www-personal.umich.edu/~siyich/Web_Save_My_Love/)
+
 
