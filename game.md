@@ -14,7 +14,7 @@
 
 EECS 494 Game Design Project 3
 
-[Download Mac/Windows](https://drive.google.com/drive/folders/1JSDcHLXwi_jk8KPJgunhmrfFV5I2091g?usp=sharing)
+[Download Mac/Windows](https://drive.google.com/drive/folders/19tqpVue4BAntjGUJz0MaRSeANvv_MPdh?usp=sharing)
 
 
 
