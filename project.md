@@ -43,5 +43,3 @@ An implementation of simple pinhole camera & lens camera with/without distortion
 *Advisor: [Xu Zhao](https://imr.sjtu.edu.cn/en/po_adj/571.html)*
 
 A multi-GPU implementation of multi-task video anomaly detection by Georgescu. The initial publication information can be found here [here](https://github.com/lilygeorgescu/AED-SSMTL), which is under the No Sharing International Public License. 
-
-So this version can be shared via email.
