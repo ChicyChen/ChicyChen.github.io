@@ -6,6 +6,12 @@
 
 ***Seeing how new knowledge comes out is a magical journey.***
 
+## Understanding 3D Object Articulation in Internet Videos (CVPR 2022)
+
+*[Shengyi Qian](https://jasonqsy.github.io/), [Linyi Jin](https://jinlinyi.github.io/), [Chris Rockwell](https://crockwell.github.io/), ***Siyi Chen***, [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+
+[Website](https://jasonqsy.github.io/Articulation3D/)
+
 ------
 
 ## Generate 3D Indoor Synthetic Dataset
@@ -14,7 +20,7 @@
 
 *Mentor: [Shengyi Qian](https://jasonqsy.github.io/)*
 
-In progress
+[GitHub](https://github.com/ChicyChen/AM3S)
 
 ------
 
@@ -33,8 +39,8 @@ In progress
 3. Use a differential render in pytorch3d similar to the NMR in PHOSA for back-propagation,  to build a similar system optimizing the position and size of the person considering 3d space relationship and interaction for each single image. 
 
 
-[github](https://github.com/ChicyChen/articulation3d/tree/main/combined)(available soon)
-[poster](SURE/poster.pdf)
+[GitHub](https://github.com/ChicyChen/CombinedOPT)
+[Poster](SURE/poster.pdf)
 
 ------
 
@@ -51,7 +57,7 @@ In progress
 1. We (a group of students really green to topology) have designed and implemented beta versions of enumerating origamis in H(2).
 2. We have utilized SageMath to implement the convexity test presented in [this paper](https://arxiv.org/abs/1306.3606) by Lelievre and Weiss.
 
-[abstract](Origami/intro.pdf) 
-[gitlab](https://gitlab.eecs.umich.edu/logm/wi21/convex-presentations-of-translation-surfaces)  [report](Origami/report.pdf) 
-[poster](Origami/poster.pdf)
+[Abstract](Origami/intro.pdf) 
+[GitLab](https://gitlab.eecs.umich.edu/logm/wi21/convex-presentations-of-translation-surfaces)  [Report](Origami/report.pdf) 
+[Poster](Origami/poster.pdf)
 

@@ -14,7 +14,7 @@
 
 University Physics Competition: Gold Medal Winnner
 
-[report](Others/190B.pdf)
+[Report](Others/190B.pdf)
 
 ------
 
@@ -24,9 +24,9 @@ University Physics Competition: Gold Medal Winnner
 
 EECS442 Computer Vision: Final Project
 
-[github](https://github.com/Wangdawei00/EECS442-project)
-[slides](EECS442/slides.pdf)
-[report](EECS442/report.pdf)
+[GitHub](https://github.com/Wangdawei00/EECS442-project)
+[Slides](EECS442/slides.pdf)
+[Report](EECS442/report.pdf)
 
 ------
 
@@ -35,7 +35,7 @@ EECS442 Computer Vision: Final Project
 
 An implementation of simple pinhole camera & lens camera with/without distortion.
 
-[github](https://github.com/ChicyChen/Cameras)
+[GitHub](https://github.com/ChicyChen/VirtualCameras)
 
 ------
 
