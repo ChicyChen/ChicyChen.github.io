@@ -2,10 +2,6 @@
 
 # Teaching
 
-****
-
-***Teaching gives me happiness.***
-
 ------
 
 ## EECS442-Computer Vision
@@ -106,15 +102,9 @@
 [Final Part1](VV286/Final Part1s.html)  [(Download pdf)](/VV286/Final Part1.pdf)  [(More About Bessel Function)](/VV286/Basics of Bessel Functions.pdf)
 
 
-
-
-------
-
-Opps! I have a bottom line.
-
 ------
 
 *Main Citation from: Lecture slides of Dr. Horst Hohberger*
 
-*Any suggestions or thoughts are welcomed through emails!*
+
 

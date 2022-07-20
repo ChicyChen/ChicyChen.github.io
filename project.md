@@ -2,10 +2,6 @@
 
 # Project
 
-****
-
-***Feeling how knowledge builds up is a wonderful journey.***
-
 ------
 
 ## Design A Roller Coaster
@@ -15,6 +11,16 @@
 University Physics Competition: Gold Medal Winnner
 
 [Report](Others/190B.pdf)
+
+------
+
+## Generate 3D Indoor Synthetic Dataset
+
+*Advisor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+
+*Mentor: [Shengyi Qian](https://jasonqsy.github.io/)*
+
+[GitHub](https://github.com/ChicyChen/AM3S)
 
 ------
 
@@ -37,9 +43,3 @@ An implementation of simple pinhole camera & lens camera with/without distortion
 
 [GitHub](https://github.com/ChicyChen/VirtualCameras)
 
-------
-
-## Multi-task Video Anomaly Detection
-*Advisor: [Xu Zhao](https://imr.sjtu.edu.cn/en/po_adj/571.html)*
-
-A multi-GPU implementation of multi-task video anomaly detection by Georgescu. The initial publication information can be found here [here](https://github.com/lilygeorgescu/AED-SSMTL), which is under the No Sharing International Public License. 

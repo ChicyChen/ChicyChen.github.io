@@ -2,25 +2,13 @@
 
 # Research
 
-****
-
-***Seeing how new knowledge comes out is a magical journey.***
+------
 
 ## Understanding 3D Object Articulation in Internet Videos (CVPR 2022)
 
 *[Shengyi Qian](https://jasonqsy.github.io/), [Linyi Jin](https://jinlinyi.github.io/), [Chris Rockwell](https://crockwell.github.io/), ***Siyi Chen***, [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
 
 [Website](https://jasonqsy.github.io/Articulation3D/)
-
-------
-
-## Generate 3D Indoor Synthetic Dataset
-
-*Advisor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
-
-*Mentor: [Shengyi Qian](https://jasonqsy.github.io/)*
-
-[GitHub](https://github.com/ChicyChen/AM3S)
 
 ------
 
