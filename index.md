@@ -1,10 +1,10 @@
-# Welcome
+<!-- # Welcome -->
 
-![](heading.jpg)
-I took this picture in Ushuaia by chance. It's so lovely.
+<!-- ![](heading.jpg) -->
+<!-- I took this picture in Ushuaia by chance. It's so lovely. -->
 
-------
-## About Me
+<!-- ------ -->
+<!-- ## About Me -->
 
 <img src="Self/IMG_3340 copy.JPG" alt="me" width="200"/> 
 
