@@ -6,7 +6,7 @@ I took this picture in Ushuaia by chance. It's so lovely.
 ------
 ## About Me
 
-<img src="Self/myimg.jpeg" alt="me" width="200"/> 
+<img src="Self/IMG_3340 copy.JPG" alt="me" width="200"/> 
 
 Hi! My name is Siyi Chen (陈思怡), Chicy is my nick name, and Stella is my real English name.
 
