@@ -8,11 +8,11 @@
 
 <img src="Self/IMG_3340 copy.JPG" alt="me" width="200"/> 
 
-Hi, I am Siyi Chen (陈思怡).
+Hi, I am Siyi Chen (陈思怡). You can also call me Stella.
 
-Currently, I am an ECE PhD student in [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/), advised by Professor [Zhongming Liu](https://libi.engin.umich.edu/profile/zhongming-liu/) and Professor [Qing Qu](https://qingqu.engin.umich.edu/). My research focus on brain and AI.
+Currently, I am an ECE PhD student in [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/), luckily advised by Professor [Zhongming Liu](https://libi.engin.umich.edu/profile/zhongming-liu/) and Professor [Qing Qu](https://qingqu.engin.umich.edu/). My research interests are brain, AI, and ML theory.
 
-Previously I was a dual degree undergraduate student: At [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/), I major in CSE & minor in Mathematics. At [UMJI](https://www.ji.sjtu.edu.cn/), [SJTU](https://en.sjtu.edu.cn/), I major in ECE. At UM, I was advised by professor [David Fouhey](https://web.eecs.umich.edu/~fouhey/) on computer vision.
+Previously I was a dual degree undergraduate student: At [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/), I major in CSE & minor in Mathematics. At [UMJI](https://www.ji.sjtu.edu.cn/), [SJTU](https://en.sjtu.edu.cn/), I major in ECE. At UM, I was luckily advised by professor [David Fouhey](https://web.eecs.umich.edu/~fouhey/) and mentored by [Shengyi Qian](https://jasonqsy.github.io/) on 3D computer vision.
 
 <!-- ------ -->
 <!-- ## Resources -->
