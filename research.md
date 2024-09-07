@@ -2,50 +2,30 @@
 
 # Research
 
-------
+## Generative Models
 
-## Understanding 3D Object Articulation in Internet Videos (CVPR 2022)
+### Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing (2024)
 
-*[Shengyi Qian](https://jasonqsy.github.io/), [Linyi Jin](https://jinlinyi.github.io/), [Chris Rockwell](https://crockwell.github.io/), ***Siyi Chen***, [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+***Siyi Chen***, [Huijie Zhang](https://www.huijiezh.com/), [Minzhe Guo](https://www.linkedin.com/in/minzhe-guo/), [Yifu Lu](https://scholar.google.com/citations?user=ybsmKpsAAAAJ&hl=en), [Peng Wang](https://peng8wang.github.io/), [Qing Qu](https://qingqu.engin.umich.edu/)
 
-[Website](https://jasonqsy.github.io/Articulation3D/)
+\[[Paper](https://arxiv.org/abs/2409.02374)\] \[[Code](https://github.com/ChicyChen/LOCO-Edit)\]
 
-------
+### Diffusion Models Learn Low-Dimensional Distributions via Subspace Clustering (2024)
 
-## Combined Understanding of 3D Plane Articulation and Partial Human Pose Estimation
+[Peng Wang](https://peng8wang.github.io/), [Huijie Zhang](https://www.huijiezh.com/), [Zekai Zhang](https://openreview.net/profile?id=~Zekai_Zhang5), ***Siyi Chen***, [Yi Ma](https://scholar.google.com/citations?hl=en&user=XqLiBQMAAAAJ), [Qing Qu](https://qingqu.engin.umich.edu/)
 
-*Advisor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
+\[[Paper](https://www.arxiv.org/abs/2409.02426)\] \[[Code](https://github.com/huijieZH/Diffusion-Model-Generalizability)\]
 
-*Mentor: [Shengyi Qian](https://jasonqsy.github.io/)*
+## Representation Leaning
 
-<img src="SURE/model.png" alt="sure" width="800"/> 
+### Unfolding Videos Dynamics via Taylor Expansion (2023)
 
-1. Independently predict 3D partial human poses as SMPL meshes  in pytorch3d following Rockwell’s methods. And use PointRend to obtain 2D human masks.
+***Siyi Chen***, [Minkyu Choi](https://scholar.google.co.kr/citations?user=QiKqiT4AAAAJ&hl=en), [Zesen Zhao](https://www.linkedin.com/in/zesen-zhao-b1b859244/?locale=en_US), [Kuan Han](https://www.linkedin.com/in/kuan-han-902a7a278/), [Qing Qu](https://qingqu.engin.umich.edu/), [Zhongming Liu](https://libi.engin.umich.edu/profile/zhongming-liu/)
 
-2. Independently predict  2D plane masks as well as 3D articulation information. 
+\[[Paper](https://arxiv.org/abs/2409.02371)\]
 
-3. Use a differential render in pytorch3d similar to the NMR in PHOSA for back-propagation,  to build a similar system optimizing the position and size of the person considering 3d space relationship and interaction for each single image. 
+### Understanding 3D Object Articulation in Internet Videos (CVPR 2022)
+[Shengyi Qian](https://jasonqsy.github.io/), [Linyi Jin](https://jinlinyi.github.io/), [Chris Rockwell](https://crockwell.github.io/), ***Siyi Chen***, [David Fouhey](https://web.eecs.umich.edu/~fouhey/)
 
-
-[GitHub](https://github.com/ChicyChen/CombinedOPT)
-[Poster](SURE/poster.pdf)
-
-------
-
-## Convex Presentations of Translation Surfaces
-
-*Student Group: Andrew Keisling, Brendan Nell, Kaiwen Lu, Siyi Chen*
-
-*Advisors: [Chaya Norton](https://lsa.umich.edu/math/people/postdoc-faculty/nchaya.html), [Paul Apisa](http://www-personal.umich.edu/~apisa/)*
-
-*Mentors: Christopher Zhang, Sayantan Khan*
-
-<img src="Origami/surface.png" alt="origami" width="500"/> 
-
-1. We (a group of students really green to topology) have designed and implemented beta versions of enumerating origamis in H(2).
-2. We have utilized SageMath to implement the convexity test presented in [this paper](https://arxiv.org/abs/1306.3606) by Lelievre and Weiss.
-
-[Abstract](Origami/intro.pdf) 
-[GitLab](https://gitlab.eecs.umich.edu/logm/wi21/convex-presentations-of-translation-surfaces)  [Report](Origami/report.pdf) 
-[Poster](Origami/poster.pdf)
+\[[Paper](https://arxiv.org/abs/2203.16531)\] \[[Website](https://jasonqsy.github.io/Articulation3D/)\] \[[Code](https://github.com/JasonQSY/Articulation3D)\]
 

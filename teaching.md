@@ -2,17 +2,26 @@
 
 # Teaching
 
-------
 
-## EECS442-Computer Vision
+
+## EECS 559 Optimization Methods for Signal and Image Processing and Machine Learning
+
+*Instructor: [Qing Qu](https://qingqu.engin.umich.edu/)*
+
+*[Course Website](https://web.eecs.umich.edu/~dvorkin/courses/eecs559/)*
+
+
+
+
+## EECS 442 Computer Vision
 
 *Instructor: [David Fouhey](https://web.eecs.umich.edu/~fouhey/)*
 
 *[Course Website](https://web.eecs.umich.edu/~fouhey/teaching/EECS442_W22/)*
 
-------
 
-## VE401-Probability Statistics Methods
+
+## VE 401 Probability Statistics Methods
 
 *Instructor: [Horst Hohberger](https://umji.sjtu.edu.cn/~horst/)*
 
@@ -70,7 +79,7 @@
 
 
 
-## VV286-Honorable Mathematics III:
+## VV 286 Honorable Mathematics III:
 
 
 *Instructor: [Horst Hohberger](https://umji.sjtu.edu.cn/~horst/)*
@@ -102,9 +111,7 @@
 [Final Part1](VV286/Final Part1s.html)  [(Download pdf)](/VV286/Final Part1.pdf)  [(More About Bessel Function)](/VV286/Basics of Bessel Functions.pdf)
 
 
-------
 
-*Main Citation from: Lecture slides of Dr. Horst Hohberger*
 
 
 

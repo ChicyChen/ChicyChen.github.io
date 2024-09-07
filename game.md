@@ -2,7 +2,7 @@
 
 # Game
 
-------
+
 
 ## Asylum 7
 
@@ -12,7 +12,7 @@ EECS 494 Game Design Project 3
 
 [Download Mac/Windows](https://drive.google.com/drive/folders/19tqpVue4BAntjGUJz0MaRSeANvv_MPdh?usp=sharing)
 
-------
+
 
 ## Save My Love
 
@@ -22,7 +22,7 @@ EECS 494 Game Design Project 2
 
 [play online](http://www-personal.umich.edu/~siyich/Web_Save_My_Love/)
 
-------
+
 
 ## Zelda(1986) Rebuilt
 
