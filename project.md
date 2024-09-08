@@ -2,7 +2,7 @@
 
 # Project
 
-## Competetion Projects
+## Competition Projects
 
 ### Design A Roller Coaster
 
