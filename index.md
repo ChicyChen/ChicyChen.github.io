@@ -21,18 +21,14 @@ Previously, I was a dual degree undergraduate student (2018 - 2022): At [Univers
 
 ## News
 
-1. \[09/04/2024\] Two papers ([paper1](https://arxiv.org/abs/2409.02374), [paper2](https://www.arxiv.org/abs/2409.02426)) on dffisuion models are released!
+1. \[09/25/2024\] Our work [Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing](https://arxiv.org/abs/2409.02374) is accepted by NeurIPS2024!
+2. \[09/04/2024\] Two papers ([paper1](https://arxiv.org/abs/2409.02374), [paper2](https://www.arxiv.org/abs/2409.02426)) on dffisuion models are released!
 
-2. \[09/04/2024\] [One paper](https://arxiv.org/abs/2409.02371) on video representation learning is released!
+3. \[09/04/2024\] [One paper](https://arxiv.org/abs/2409.02371) on video representation learning is released!
 
 
 ## Preprints
 
-### Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing (2024)
-
-***Siyi Chen***, [Huijie Zhang](https://www.huijiezh.com/), [Minzhe Guo](https://www.linkedin.com/in/minzhe-guo/), [Yifu Lu](https://scholar.google.com/citations?user=ybsmKpsAAAAJ&hl=en), [Peng Wang](https://peng8wang.github.io/), [Qing Qu](https://qingqu.engin.umich.edu/)
-
-\[[Paper](https://arxiv.org/abs/2409.02374)\] \[[Code](https://github.com/ChicyChen/LOCO-Edit)\]
 
 ### Diffusion Models Learn Low-Dimensional Distributions via Subspace Clustering (2024)
 
@@ -48,6 +44,12 @@ Previously, I was a dual degree undergraduate student (2018 - 2022): At [Univers
 
 
 ## Publications
+
+### Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing (NeurIPS 2024)
+
+***Siyi Chen***, [Huijie Zhang](https://www.huijiezh.com/), [Minzhe Guo](https://www.linkedin.com/in/minzhe-guo/), [Yifu Lu](https://scholar.google.com/citations?user=ybsmKpsAAAAJ&hl=en), [Peng Wang](https://peng8wang.github.io/), [Qing Qu](https://qingqu.engin.umich.edu/)
+
+\[[Paper](https://arxiv.org/abs/2409.02374)\] \[[Code](https://github.com/ChicyChen/LOCO-Edit)\]
 
 ### Understanding 3D Object Articulation in Internet Videos (CVPR 2022)
 [Shengyi Qian](https://jasonqsy.github.io/), [Linyi Jin](https://jinlinyi.github.io/), [Chris Rockwell](https://crockwell.github.io/), ***Siyi Chen***, [David Fouhey](https://web.eecs.umich.edu/~fouhey/)
