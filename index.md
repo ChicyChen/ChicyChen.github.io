@@ -49,7 +49,7 @@ Previously, I was a dual degree undergraduate student (2018 - 2022): At [Univers
 
 ***Siyi Chen***, [Huijie Zhang](https://www.huijiezh.com/), [Minzhe Guo](https://www.linkedin.com/in/minzhe-guo/), [Yifu Lu](https://scholar.google.com/citations?user=ybsmKpsAAAAJ&hl=en), [Peng Wang](https://peng8wang.github.io/), [Qing Qu](https://qingqu.engin.umich.edu/)
 
-\[[Paper](https://arxiv.org/abs/2409.02374)\] \[[Code](https://github.com/ChicyChen/LOCO-Edit)\]
+\[[Paper](https://arxiv.org/abs/2409.02374)\] \[[Website](LOCO/index.html)\] \[[Code](https://github.com/ChicyChen/LOCO-Edit)\]
 
 ### Understanding 3D Object Articulation in Internet Videos (CVPR 2022)
 [Shengyi Qian](https://jasonqsy.github.io/), [Linyi Jin](https://jinlinyi.github.io/), [Chris Rockwell](https://crockwell.github.io/), ***Siyi Chen***, [David Fouhey](https://web.eecs.umich.edu/~fouhey/)
