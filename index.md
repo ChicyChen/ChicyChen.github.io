@@ -12,7 +12,7 @@ Email: siyich@umich.edu
 
 Hi, I am Siyi Chen (陈思怡). You can also call me Stella.
 
-Currently, I am an ECE PhD student in [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/) (2022 - Present), luckily advised by Professor [Qing Qu](https://qingqu.engin.umich.edu/). My research interests are generative models, representation learning, and their connections. I am interested in understanding the learning mechanism and learned information of generative or perception models for unified and interpretable utilization, and desiging better learning algorithms with inspirations from optimization, physics, and human brains. Specifically, I am studying the aforementioned questions in diffusion models, multimodal learning, self-supervised representation learning, and dynamics modeling.
+Currently, I am an ECE PhD student in [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/) (2022 - Present), luckily advised by Professor [Qing Qu](https://qingqu.engin.umich.edu/). My research interests encompass *generative models*, *representation learning*, and *their connections*. I am keen on understanding the learning mechanisms and the acquired information structure of generative and perceptual models. I aim to utilize the theoretical understandings for unified and interpretable applications while combining inspirations from optimization techniques, principles of physics, and human cognition. Specifically, I am exploring these questions in diffusion models, multimodal learning, self-supervised learning, and dynamics modeling.
 
 Previously, I was a dual degree undergraduate student (2018 - 2022): At [University of Michigan-Ann Arbor](https://cse.engin.umich.edu/), I majored in CSE & minored in Mathematics. At [UMJI](https://www.ji.sjtu.edu.cn/), [SJTU](https://en.sjtu.edu.cn/), I majored in ECE. At UM, I was luckily advised by professor [David Fouhey](https://web.eecs.umich.edu/~fouhey/) and mentored by [Shengyi Qian](https://jasonqsy.github.io/) on computer vision.
 
@@ -23,10 +23,10 @@ Previously, I was a dual degree undergraduate student (2018 - 2022): At [Univers
 
 1. \[10/2024\] One paper on self-superised learning is accepted by NeurIPS 2024 SSL Workshop!
 2. \[10/2024\] Two papers on diffusion models are accepted by NeurIPS 2024 M3L Workshop!
-3. \[09/2024\] Our work [Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing](https://arxiv.org/abs/2409.02374) is accepted by NeurIPS2024!
+3. \[09/2024\] Our work [Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing](https://arxiv.org/abs/2409.02374) is accepted by NeurIPS 2024!
 4. \[09/2024\] Two papers ([paper1](https://arxiv.org/abs/2409.02374), [paper2](https://www.arxiv.org/abs/2409.02426)) on dffisuion models are released!
-
 5. \[09/2024\] [One paper](https://arxiv.org/abs/2409.02371) on video representation learning is released!
+6. \[05/2024\] I have passed my PhD qualification exam!
 
 
 <!-- ## Preprints -->
