@@ -21,23 +21,15 @@ Previously, I was a dual degree undergraduate student (2018 - 2022): At [Univers
 
 ## News
 
-1. \[10/2024\] Two papers on diffusion models are accepted by NeurIPS 2024 M3L Workshop!
-2. \[09/2024\] Our work [Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing](https://arxiv.org/abs/2409.02374) is accepted by NeurIPS2024!
-3. \[09/2024\] Two papers ([paper1](https://arxiv.org/abs/2409.02374), [paper2](https://www.arxiv.org/abs/2409.02426)) on dffisuion models are released!
+1. \[10/2024\] One paper on self-superised learning is accepted by NeurIPS 2024 SSL Workshop!
+2. \[10/2024\] Two papers on diffusion models are accepted by NeurIPS 2024 M3L Workshop!
+3. \[09/2024\] Our work [Exploring Low-Dimensional Subspaces in Diffusion Models for Controllable Image Editing](https://arxiv.org/abs/2409.02374) is accepted by NeurIPS2024!
+4. \[09/2024\] Two papers ([paper1](https://arxiv.org/abs/2409.02374), [paper2](https://www.arxiv.org/abs/2409.02426)) on dffisuion models are released!
 
-4. \[09/2024\] [One paper](https://arxiv.org/abs/2409.02371) on video representation learning is released!
-
-
-## Preprints
+5. \[09/2024\] [One paper](https://arxiv.org/abs/2409.02371) on video representation learning is released!
 
 
-### Unfolding Videos Dynamics via Taylor Expansion (2023)
-
-***Siyi Chen***, [Minkyu Choi](https://scholar.google.co.kr/citations?user=QiKqiT4AAAAJ&hl=en), [Zesen Zhao](https://www.linkedin.com/in/zesen-zhao-b1b859244/?locale=en_US), [Kuan Han](https://www.linkedin.com/in/kuan-han-902a7a278/), [Qing Qu](https://qingqu.engin.umich.edu/), [Zhongming Liu](https://libi.engin.umich.edu/profile/zhongming-liu/)
-
-\[[Paper](https://arxiv.org/abs/2409.02371)\]
-
-<img src="images/vididi-main.png" alt="" width="600"/> 
+<!-- ## Preprints -->
 
 ## Publications
 
@@ -49,7 +41,15 @@ Previously, I was a dual degree undergraduate student (2018 - 2022): At [Univers
 
 <img src="images/loco-main.png" alt="" width="600"/> 
 
-### Diffusion Models Learn Low-Dimensional Distributions via Subspace Clustering (NeurIPS Workshop 2024)
+### Unfolding Videos Dynamics via Taylor Expansion (NeurIPS 2024 Workshop)
+
+***Siyi Chen***, [Minkyu Choi](https://scholar.google.co.kr/citations?user=QiKqiT4AAAAJ&hl=en), [Zesen Zhao](https://www.linkedin.com/in/zesen-zhao-b1b859244/?locale=en_US), [Kuan Han](https://www.linkedin.com/in/kuan-han-902a7a278/), [Qing Qu](https://qingqu.engin.umich.edu/), [Zhongming Liu](https://libi.engin.umich.edu/profile/zhongming-liu/)
+
+\[[Paper](https://arxiv.org/abs/2409.02371)\]
+
+<img src="images/vididi-main.png" alt="" width="600"/> 
+
+### Diffusion Models Learn Low-Dimensional Distributions via Subspace Clustering (NeurIPS 2024 Workshop)
 
 [Peng Wang](https://peng8wang.github.io/), [Huijie Zhang](https://www.huijiezh.com/), [Zekai Zhang](https://openreview.net/profile?id=~Zekai_Zhang5), ***Siyi Chen***, [Yi Ma](https://scholar.google.com/citations?hl=en&user=XqLiBQMAAAAJ), [Qing Qu](https://qingqu.engin.umich.edu/)
 
