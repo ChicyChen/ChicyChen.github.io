@@ -4,7 +4,7 @@
 
 Email: siyich@umich.edu
 
-[Google Scholar](https://scholar.google.com/citations?user=j65QlFkAAAAJ&hl=en) / [Github](https://github.com/ChicyChen)
+[Google Scholar](https://scholar.google.com/citations?user=j65QlFkAAAAJ&hl=en) / [Github](https://github.com/ChicyChen) / [CV](Resume.pdf)
 
 \[[Research](research.md)\]  \[[Teaching](teaching.md)\]  \[[Project](project.md)\]
 
