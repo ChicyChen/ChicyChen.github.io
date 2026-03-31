@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>On the Limits of Token Reduction for Efficient Unified Vision Language Training</title>
+    <style>
+      :root {
+        --text: #111827;
+        --muted: #6b7280;
+        --link: #2563eb;
+        --border: rgba(17, 24, 39, 0.12);
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--text);
+        background: #ffffff;
+        line-height: 1.45;
+      }
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 28px 20px 60px;
+      }
+      header {
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 22px;
+      }
+      h1 {
+        margin: 0 0 14px 0;
+        font-size: 30px;
+        letter-spacing: -0.02em;
+      }
+      .meta {
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .authors {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+        align-items: baseline;
+        font-size: 16px;
+      }
+      .authors a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      .authors a:hover {
+        text-decoration: underline;
+      }
+      .links {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        font-size: 15px;
+      }
+      .pill a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      .pill a:hover {
+        text-decoration: underline;
+      }
+      .quote {
+        margin: 18px 0 10px;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(37, 99, 235, 0.03);
+      }
+      .quote b {
+        font-weight: 700;
+      }
+      section {
+        margin-top: 24px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+      .abstract {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 16px;
+        background: #fff;
+      }
+      .abstract p {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+      .todo {
+        color: #9ca3af;
+      }
+      pre {
+        overflow: auto;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #0b1020;
+        color: #e5e7eb;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      footer {
+        margin-top: 40px;
+        color: var(--muted);
+        font-size: 13px;
+        border-top: 1px solid var(--border);
+        padding-top: 16px;
+      }
+      figure {
+        margin: 16px 0 0 0;
+        text-align: center;
+      }
+      figure img {
+        max-width: 100%;
+        border-radius: 10px;
+        border: 1px solid rgba(17, 24, 39, 0.10);
+      }
+      figcaption {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.35;
+        text-align: center;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+        margin-top: 12px;
+      }
+      table.paper-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 720px;
+        font-size: 13px;
+      }
+      table.paper-table th,
+      table.paper-table td {
+        border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+        padding: 8px 10px;
+        vertical-align: top;
+      }
+      table.paper-table th {
+        position: sticky;
+        top: 0;
+        background: rgba(37, 99, 235, 0.06);
+        text-align: left;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>On the Limits of Token Reduction for Efficient Unified Vision Language Training</h1>
+        <div class="authors">
+          <span><b>Authors:</b></span>
+          <span>
+            <a href="https://scholar.google.com/citations?user=j65QlFkAAAAJ&hl=en" target="_blank" rel="noreferrer">Siyi Chen</a><sup>1</sup>&nbsp;*
+          </span>
+          <span>
+            Weiming Zhuang<sup>2</sup>
+          </span>
+          <span>
+            Jingtao Li<sup>2</sup>
+          </span>
+          <span>
+            Lingjuan Lv<sup>2</sup>
+          </span>
+        </div>
+        <div class="meta">
+          <div>
+            <b>1</b> University of Michigan&nbsp;&nbsp; <b>2</b> Sony AI
+          </div>
+          <div>CVPRW 2026</div>
+          <div class="todo">*Work done during an internship at Sony AI.</div>
+        </div>
+        <div class="links">
+          <div class="pill">
+            <a href="./paper.pdf" target="_blank" rel="noreferrer">Paper (PDF)</a>
+          </div>
+          <div class="pill">
+            <a href="https://arxiv.org/abs/TBD" target="_blank" rel="noreferrer">ArXiv</a>
+          </div>
+          <div class="pill">
+            <a href="https://github.com/ChicyChen/UnifiedVLM-TokenReduct" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="quote">
+        <b>Key takeaway:</b> Efficient unified modeling requires preserving shared cross-task structures; naive token dropping breaks cross-task synergy.
+      </div>
+
+      <!-- ====== Abstract ====== -->
+      <section>
+        <h2>Abstract</h2>
+        <div class="abstract">
+          <p>
+Unified vision-language models (VLMs) integrate visual understanding and visual generation within a single autoregressive
+backbone, but their joint training is computationally expensive and largely overlooked from an efficiency perspective.
+In this work, we study the feasibility and limits of token-reduction-based acceleration for unified VLM training.
+Through a systematic analysis of layerwise attention allocation, we uncover a fundamental asymmetry: visual understanding exhibits substantial late-layer visual redundancy,
+whereas visual generation maintains persistent dependence on image tokens across depth.
+Guided by this observation, we design task-specific accelerators that selectively reduce image-token computation for each objective.
+While these methods achieve significant efficiency gains in isolated settings, we observe a consistent synergy loss under unified training:
+task-specific token dropping necessitates divergent parameter pathways and eliminates the mutual performance gains typically observed in joint optimization.
+Our findings suggest that efficient unified modeling requires preserving shared cross-task structures, highlighting the need for synergy-aware acceleration strategies.
+          </p>
+        </div>
+      </section>
+
+      <!-- ====== What we study + Fig 1 ====== -->
+      <section>
+        <h2>What we study</h2>
+        <p>
+Unified vision-language models (VLMs) jointly learn visual understanding (e.g., text prediction conditioned on images)
+and visual generation (autoregressively predicting image tokens) with a single next-token objective.
+However, joint training is expensive, and token-reduction methods that work for inference-time or
+single-task settings do not directly translate to training-time efficiency.
+We investigate whether token-reduction acceleration can be extended to unified training and what its fundamental limits are.
+        </p>
+        <figure>
+          <img src="./figures/fig1.png" alt="Figure 1" style="max-width: 520px;" />
+          <figcaption><b>Figure 1.</b> Unified autoregressive VLM: one Transformer backbone predicts both text and image tokens under a unified next-token objective.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ====== Contributions ====== -->
+      <section>
+        <h2>Contributions</h2>
+        <p>We make four main contributions:</p>
+        <p>
+&bull; <b>Unified redundancy analysis:</b> characterize an asymmetry in token usage across depth for understanding vs generation.<br />
+&bull; <b>Task-specific accelerators:</b> propose training-time token reduction methods for understanding and generation separately.<br />
+&bull; <b>Synergy loss discovery:</b> show that combining task-specific token reduction under unified training can collapse joint performance.<br />
+&bull; <b>Lessons for unified acceleration:</b> effective strategies must preserve shared cross-task structures rather than composing isolated optimizations.
+        </p>
+      </section>
+
+      <!-- ====== Core idea + Fig 2 & Fig 3 ====== -->
+      <section>
+        <h2>Core idea</h2>
+        <p>
+Through attention-allocation analysis, we uncover a depth-dependent asymmetry:
+late-layer visual tokens are substantially redundant for <b>visual understanding</b>,
+while <b>visual generation</b> maintains persistent dependence on image tokens across depth.
+This observation motivates task-aware accelerators that reduce image-token computation
+in a way that matches each objective's token-utilization pattern.
+        </p>
+        <figure>
+          <img src="./figures/fig2.png" alt="Figure 2" />
+          <figcaption><b>Figure 2.</b> Asymmetric depth-wise attention patterns: visual understanding shows late-layer visual redundancy, while visual generation preserves image-token dependence across depth.</figcaption>
+        </figure>
+        <figure>
+          <img src="./figures/fig3.png" alt="Figure 3" />
+          <figcaption><b>Figure 3.</b> Quantitative attention allocation confirms the redundancy asymmetry across layers.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ====== Task-specific accelerators + Fig 4 + Tables 1 & 2 ====== -->
+      <section>
+        <h2>Task-specific accelerators</h2>
+
+        <h3 style="margin: 0 0 8px; font-size: 16px;">HiMix (Understanding)</h3>
+        <p>
+For understanding, we reduce image-token computation by removing image tokens from the <b>query</b> stream
+while retaining them in key/value projections. This eliminates expensive image-to-image quadratic attention,
+while keeping the necessary text-to-image interactions.
+        </p>
+
+        <h3 style="margin: 18px 0 8px; font-size: 16px;">HMGen (Generation)</h3>
+        <p>
+For generation, we must preserve autoregressive structure: predicted image tokens need to remain valid queries
+for subsequent image-token prediction. HMGen therefore skips image-token attention/FFN updates only in a set
+of designated "shallow" middle layers, forwarding image-token hidden states without participation in updates.
+Additionally, HMGen introduces separate projection parameters for image vs text tokens in full layers to stabilize hierarchical conditioning.
+        </p>
+
+        <figure>
+          <img src="./figures/fig4.png" alt="Figure 4" />
+          <figcaption><b>Figure 4.</b> Task-specific accelerators: HiMix removes image tokens from queries for understanding; HMGen skips image-token computation in designated shallow layers for generation.</figcaption>
+        </figure>
+
+        <h3 style="margin: 18px 0 10px; font-size: 16px;">Table 1. HiMix for visual understanding</h3>
+        <div class="table-wrap">
+          <table class="paper-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>GQA</th>
+                <th>MME-C</th>
+                <th>MME-P</th>
+                <th>POPE-A</th>
+                <th>POPE-P</th>
+                <th>POPE-R</th>
+                <th>POPE-F1</th>
+                <th>SeedBench-Img</th>
+                <th>FLOPs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VILA-U (U-only)</td>
+                <td>52.86</td>
+                <td>258.21</td>
+                <td>1054.88</td>
+                <td>81.30</td>
+                <td>84.67</td>
+                <td>74.76</td>
+                <td>79.40</td>
+                <td>46.05</td>
+                <td>1&times;</td>
+              </tr>
+              <tr>
+                <td>HiMix (U-only)</td>
+                <td>49.92</td>
+                <td>224.64</td>
+                <td>983.30</td>
+                <td>78.56</td>
+                <td>78.03</td>
+                <td>79.49</td>
+                <td>78.75</td>
+                <td>40.88</td>
+                <td>0.24&times;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin: 18px 0 10px; font-size: 16px;">Table 2. HMGen for visual generation</h3>
+        <div class="table-wrap">
+          <table class="paper-table" style="min-width: 520px;">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>#Shallow Layers</th>
+                <th>MJHQ-30K</th>
+                <th>FLOPs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VILA-U (G-only)</td>
+                <td>0</td>
+                <td>17.45</td>
+                <td>1&times;</td>
+              </tr>
+              <tr>
+                <td>HMGen</td>
+                <td>3</td>
+                <td>12.16</td>
+                <td>0.85&times;</td>
+              </tr>
+              <tr>
+                <td>HMGen</td>
+                <td>5</td>
+                <td>12.55</td>
+                <td>0.75&times;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====== Synergy loss + Table 3 ====== -->
+      <section>
+        <h2>Why unified token reduction fails</h2>
+        <p>
+When task-specific token reduction is applied under unified training,
+we observe a consistent <b>synergy loss</b>: unified training's mutual performance gains disappear,
+and both understanding and generation can collapse compared to the unified baseline.
+The central issue is that token dropping changes which tokens participate in attention,
+which parameters receive gradients, and thus fragments the shared cross-task optimization dynamics.
+        </p>
+
+        <h3 style="margin: 18px 0 10px; font-size: 16px;">Table 3. Unified training: synergy loss</h3>
+        <div class="table-wrap">
+          <table class="paper-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>GQA</th>
+                <th>MME-C</th>
+                <th>MME-P</th>
+                <th>POPE-F1</th>
+                <th>SeedBench-Img</th>
+                <th>MJHQ</th>
+                <th>FLOPs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VILA-U (U-only)</td>
+                <td>52.86</td>
+                <td>258.21</td>
+                <td>1054.88</td>
+                <td>79.40</td>
+                <td>46.05</td>
+                <td>&ndash;</td>
+                <td>1&times;</td>
+              </tr>
+              <tr>
+                <td>VILA-U (G-only)</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>17.45</td>
+                <td>1&times;</td>
+              </tr>
+              <tr>
+                <td>VILA-U (Unified)</td>
+                <td>56.00</td>
+                <td>250.00</td>
+                <td>1135.91</td>
+                <td>82.30</td>
+                <td>47.88</td>
+                <td>15.78</td>
+                <td>1&times;</td>
+              </tr>
+              <tr>
+                <td>HiMix (U-only)</td>
+                <td>49.92</td>
+                <td>224.64</td>
+                <td>983.30</td>
+                <td>78.75</td>
+                <td>40.88</td>
+                <td>&ndash;</td>
+                <td>0.24&times;</td>
+              </tr>
+              <tr>
+                <td>HMGen (G-only)</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>&ndash;</td>
+                <td>12.16</td>
+                <td>0.85&times;</td>
+              </tr>
+              <tr>
+                <td>HiMix&ndash;HMGen (Share All)</td>
+                <td>33.00</td>
+                <td>233.21</td>
+                <td>662.26</td>
+                <td>67.59</td>
+                <td>31.38</td>
+                <td>12.53</td>
+                <td>0.56&times;</td>
+              </tr>
+              <tr>
+                <td>HiMix&ndash;HMGen (Share Partial)</td>
+                <td>47.05</td>
+                <td>255.00</td>
+                <td>847.82</td>
+                <td>76.58</td>
+                <td>34.50</td>
+                <td>14.54</td>
+                <td>0.55&times;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====== Synergy-aware mitigation + Fig 6 ====== -->
+      <section>
+        <h2>Synergy-aware mitigation</h2>
+        <p>
+To mitigate synergy breakage, we introduce a <b>separate image projection strategy</b>:
+instead of fully sharing image-related projection parameters, we partially decouple them
+by decomposing image projection matrices into shared and image-specific components.
+This partially restores shared pathways while still allowing token participation to differ across tasks.
+        </p>
+        <figure>
+          <img src="./figures/fig6.png" alt="Figure 6" />
+          <figcaption><b>Figure 6.</b> Separate image projection strategy: decoupling shared and image-specific projection components partially restores cross-task synergy.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ====== BibTeX ====== -->
+      <section>
+        <h2>BibTeX</h2>
+        <pre><code>
+@inproceedings{chen2026token_reduction_unified_vlm,
+  title={On the Limits of Token Reduction for Efficient Unified Vision Language Training},
+  author={Chen, Siyi and Zhuang, Weiming and Li, Jingtao and Lv, Lingjuan},
+  booktitle={CVPRW},
+  year={2026}
+}
+        </code></pre>
+      </section>
+
+      <footer>
+        Tip: when you add this folder under your GitHub Pages repo (like <code>LOCO/</code>),
+        place your final PDF as <code>paper.pdf</code> in this folder and update the ArXiv/code links.
+      </footer>
+    </div>
+  </body>
+</html>
