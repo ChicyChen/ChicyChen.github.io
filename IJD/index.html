@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Unlearned but Recoverable: an interpretable residual subspace drives both jailbreaking attacks (SubAttack) and defenses (SubDefense) in diffusion model unlearning.">
+  <meta property="og:title" content="Unlearned but Recoverable: An Interpretable Residual Subspace Drives Both Attacks and Defenses in Diffusion Unlearning"/>
+  <meta property="og:description" content="The erased concept persists as a structured, interpretable residual subspace. SubAttack reads it out; SubDefense projects it out."/>
+  <meta property="og:url" content="https://chicychen.github.io/IJD/"/>
+  <meta property="og:image" content="static/images/subattack.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="Unlearned but Recoverable">
+  <meta name="twitter:description" content="An interpretable residual subspace drives both attacks and defenses in diffusion unlearning.">
+  <meta name="twitter:image" content="static/images/subattack.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="diffusion models, machine unlearning, concept erasure, jailbreak attack, interpretability, token embeddings, defense, safety">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Unlearned but Recoverable</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Unlearned but Recoverable: An Interpretable Residual Subspace Drives Both Attacks and Defenses in Diffusion Unlearning</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://chicychen.github.io/" target="_blank">Siyi Chen</a>,</span>
+              <span class="author-block">
+                <a href="https://damon-demon.github.io/" target="_blank">Yimeng Zhang</a>,</span>
+              <span class="author-block">
+                <a href="https://lsjxjtu.github.io/" target="_blank">Sijia Liu</a>,</span>
+              <span class="author-block">
+                <a href="https://qingqu.engin.umich.edu/" target="_blank">Qing Qu</a></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of Michigan &nbsp;&middot;&nbsp; Michigan State University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- arXiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2504.21307" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv abstract link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.21307" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+            </span>
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/ChicyChen/Diffusion_Attacking" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/subattack.jpg" alt="SubAttack jailbreaks various concepts across different unlearned models."
+           style="width: 100%; display: block; margin: 0 auto;"/>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <b>An erased concept survives as an interpretable residual subspace. <span style="color:#c0392b;">SubAttack</span> <i>reads it out</i>; <span style="color:#2c6fbb;">SubDefense</span> <i>projects it out</i> &mdash; both are two operations on the same structure.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser -->
+
+<!-- Abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Diffusion models excel at generating high-quality images but can memorize and reproduce
+            harmful concepts when prompted. Although fine-tuning methods have been proposed to
+            <i>unlearn</i> a target concept, they struggle to fully erase the concept while maintaining
+            generation quality on other concepts, leaving models vulnerable to jailbreak attacks.
+            Existing jailbreak methods demonstrate this vulnerability but offer limited insight into
+            <i>how</i> unlearned models retain harmful concepts, limiting progress on effective defenses.
+            In this work, we show that the erased concept persists as a coherent, human-interpretable
+            <b>linear residual subspace</b> of the token embedding space, and that both an attack and a
+            defense follow directly from this structure. We introduce <b>SubAttack</b>, a novel
+            jailbreaking attack that <i>reads out</i> this subspace by learning an orthogonal set of
+            attack token embeddings, each a linear combination of human-interpretable textual elements,
+            revealing that unlearned models still retain the target concept through related textual
+            components. Furthermore, our attack is also more powerful and transferable across text prompts,
+            initial noises, and unlearned models than prior attacks. Conversely, <i>projecting out</i> the same
+            subspace yields <b>SubDefense</b>, a lightweight plug-and-play defense mechanism that suppresses the
+            residual concept in unlearned models. SubDefense provides stronger robustness than existing
+            defenses while better preserving safe generation quality. Extensive experiments across
+            multiple unlearning methods, concepts, and attack types demonstrate that our approach advances
+            both understanding and mitigation of vulnerabilities in diffusion unlearning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End abstract -->
+
+
+<!-- The key idea -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center;">
+        <h2 class="title is-3">A Shared Interpretable Residual Subspace</h2>
+        <img src="static/images/method_horizontal.png" width="950px" style="max-width:100%;"/>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <b>Learning one interpretable attack token embedding: the concept persists along a subspace spanned by
+          non-negative combinations of existing vocabulary tokens. SubAttack learns an orthogonal basis of this
+          subspace; SubDefense removes it by orthogonal projection.</b>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interpretability -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center;">
+        <h2 class="title is-3">The Residual Is Human-Interpretable</h2>
+        <img src="static/images/alpha.png" width="850px" style="max-width:100%;"/>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <b>Each learned attack token decomposes into human-readable concepts. Stronger unlearning mutes
+          explicit keywords (e.g., &ldquo;nude,&rdquo; &ldquo;naked&rdquo;) but leaves implicit associations
+          (e.g., &ldquo;slave,&rdquo; &ldquo;nip,&rdquo; &ldquo;babes&rdquo;).</b>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Attack results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center;">
+        <h2 class="title is-3">SubAttack: Reading Out the Subspace</h2>
+        <img src="static/images/combine_results.png" width="820px" style="max-width:100%;"/>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <b>SubAttack generates the target concept with high attack success rate while faithfully aligning with
+          the text prompt &mdash; e.g., producing the concept across different backgrounds where CCE fails to
+          follow the prompt &mdash; all while remaining fully interpretable.</b>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transfer -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center;">
+        <h2 class="title is-3">The Residual Is Inherited &amp; Transferable</h2>
+        <img src="static/images/transfer_combined.jpg" width="850px" style="max-width:100%;"/>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <b>Attack tokens transfer reliably across prompts, initial noise, and different unlearned models,
+          and remain effective when transferred back to the original diffusion model &mdash; the residual is
+          inherited from the base model rather than independently formed.</b>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Defense -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center;">
+        <h2 class="title is-3">SubDefense: Projecting Out the Subspace</h2>
+        <img src="static/images/compare_defense_unlearndiff.jpg" width="850px" style="max-width:100%;"/>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <b>Removing the same subspace yields a lightweight, plug-and-play defense that lowers ASR across
+          unlearned models and attack types &mdash; and composes on top of existing unlearners, including
+          adversarially finetuned ones such as STEREO.</b>
+        </h2>
+        <img src="static/images/compare_coco.jpg" width="850px" style="max-width:100%; margin-top: 1.5rem;"/>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <b>SubDefense better preserves safe generation quality (lower FID, higher CLIP) than prior defenses.</b>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{chen2025dualpower,
+  title={The Dual Power of Interpretable Token Embeddings: Jailbreaking Attacks and Defenses for Diffusion Model Unlearning},
+  author={Chen, Siyi and Zhang, Yimeng and Liu, Sijia and Qu, Qing},
+  journal={arXiv preprint arXiv:2504.21307},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+<!-- End BibTeX -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+            adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
+            <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
