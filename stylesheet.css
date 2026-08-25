@@ -201,6 +201,7 @@ h2 {
 }
 
 .highlighted-publication > td:last-child {
+  padding: 20px;
   border-right: 1px solid #f6dfb9;
   border-radius: 0 8px 8px 0;
 }
