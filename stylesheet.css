@@ -142,6 +142,69 @@ h2 {
   font-size: 22px;
 }
 
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.publication-filter {
+  padding: 7px 12px;
+  border: 1px solid #c7d8ea;
+  border-radius: 999px;
+  background: #f7faff;
+  color: #315b80;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.publication-filter:hover {
+  border-color: #1772d0;
+  background: #edf5fd;
+}
+
+.publication-filter:focus-visible {
+  outline: 2px solid #f09228;
+  outline-offset: 2px;
+}
+
+.publication-filter.active {
+  border-color: #1772d0;
+  background: #1772d0;
+  color: #fff;
+}
+
+.publication-filter-status {
+  min-height: 1em;
+  margin: 10px 0 0;
+  color: #667;
+  font-size: 12px;
+}
+
+.publication-item[hidden] {
+  display: none;
+}
+
+.highlighted-publication > td {
+  background: #fff9ed;
+  border-top: 1px solid #f6dfb9;
+  border-bottom: 1px solid #f6dfb9;
+}
+
+.highlighted-publication > td:first-child {
+  border-left: 4px solid #f09228;
+  border-radius: 8px 0 0 8px;
+}
+
+.highlighted-publication > td:last-child {
+  border-right: 1px solid #f6dfb9;
+  border-radius: 0 8px 8px 0;
+}
+
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;

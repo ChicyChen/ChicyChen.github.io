@@ -162,13 +162,24 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Publicaions</h2>
+                <h2>Publications</h2>
+                <div class="publication-filters" role="group" aria-label="Filter publications by research area">
+                  <button class="publication-filter active" type="button" aria-pressed="true" data-filter="all">All papers</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="agentic">Agentic Robotics &amp; Spatial Intelligence</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="infrastructure">Infrastructure</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="post-training">Post-training (RL &amp; SFT)</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="diffusion">Diffusion Models</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="vlm">VLM &amp; Multimodality</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="interpretability">Interpretability</button>
+                  <button class="publication-filter" type="button" aria-pressed="false" data-filter="representation">Representation Learning</button>
+                </div>
+                <p class="publication-filter-status" aria-live="polite"></p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="publication-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-            <tr>
+            <tr class="publication-item highlighted-publication" data-domains="agentic vlm">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/volo-teaser.png" alt="VoLo overview" width="350">
               </td>
@@ -211,7 +222,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item highlighted-publication" data-domains="agentic infrastructure interpretability representation">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/dense-hetero-latent-mas-teaser.png" alt="Dense latent communication overview" width="350">
               </td>
@@ -245,7 +256,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item" data-domains="agentic post-training vlm">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/probe-teaser.png" alt="PROBE framework overview" width="350">
               </td>
@@ -275,7 +286,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item" data-domains="agentic post-training vlm">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/vesta-teaser.png" alt="Vesta model overview" width="350">
               </td>
@@ -299,7 +310,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item highlighted-publication" data-domains="agentic infrastructure post-training vlm">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <video width="350" autoplay muted loop playsinline>
                   <source src="images/demo.mp4" type="video/mp4">
@@ -338,7 +349,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item" data-domains="diffusion representation">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/theory-main.png" alt="clean-usnob" width="350">
               </td>
@@ -356,7 +367,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item" data-domains="diffusion interpretability representation">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/xiao_feature.png" alt="Representation Dynamics" width="350">
               </td>
@@ -375,7 +386,7 @@
             </tr>
             
 
-            <tr>
+            <tr class="publication-item highlighted-publication" data-domains="vlm interpretability representation">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/clip-main.png" alt="clean-usnob" width="350">
               </td>
@@ -393,7 +404,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item" data-domains="infrastructure vlm">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="TokenReductionUnifiedVLM/figures/fig2.png" alt="Token Reduction Unified VLM" width="350">
               </td>
@@ -422,7 +433,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item highlighted-publication" data-domains="diffusion interpretability">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/attack.png" alt="clean-usnob" width="350">
               </td>
@@ -440,7 +451,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item" data-domains="diffusion interpretability">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/PFD.png" alt="Probability Flow Distance" width="350">
               </td>
@@ -458,7 +469,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr class="publication-item highlighted-publication" data-domains="diffusion interpretability representation">
               <td style="padding:20px;width:40%;vertical-align:middle">
                 <img src="images/loco-main.png" alt="clean-usnob" width="350">
               </td>
@@ -480,7 +491,7 @@
 
 
 
-            <tr>
+            <tr class="publication-item" data-domains="representation">
                 <td style="padding:20px;width:40%;vertical-align:middle">
                   <img src="images/vididi-main.png" alt="clean-usnob" width="350">
                 </td>
@@ -499,7 +510,7 @@
               </tr>
 
 
-              <tr>
+              <tr class="publication-item" data-domains="agentic representation">
                 <td style="padding:20px;width:40%;vertical-align:middle">
                   <img src="images/art3d-main.png" alt="clean-usnob" width="350">
                 </td>
@@ -677,5 +688,39 @@
         </td>
       </tr>
     </table>
+    <script>
+      (function () {
+        const filters = document.querySelectorAll('.publication-filter');
+        const publications = document.querySelectorAll('.publication-item');
+        const status = document.querySelector('.publication-filter-status');
+
+        function showPublications(filter) {
+          let visibleCount = 0;
+
+          publications.forEach(function (publication) {
+            const domains = publication.dataset.domains.split(' ');
+            const isVisible = filter === 'all' || domains.includes(filter);
+            publication.hidden = !isVisible;
+            if (isVisible) visibleCount += 1;
+          });
+
+          filters.forEach(function (button) {
+            const isActive = button.dataset.filter === filter;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+          });
+
+          status.textContent = visibleCount + (visibleCount === 1 ? ' paper' : ' papers');
+        }
+
+        filters.forEach(function (button) {
+          button.addEventListener('click', function () {
+            showPublications(button.dataset.filter);
+          });
+        });
+
+        showPublications('all');
+      }());
+    </script>
   </body>
 </html>
